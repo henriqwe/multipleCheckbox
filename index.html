@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div>
+        <input type="checkbox" name="cbx" value="1" onclick="teste(this.value)" />1
+        <input type="checkbox" name="cbx" value="2" onclick="teste(this.value)" />2
+        <input type="checkbox" name="cbx" value="1" onclick="teste(this.value)" />1
+        <input type="checkbox" name="cbx" value="4" onclick="teste(this.value)" />4
+        <input type="checkbox" name="cbx" value="1" onclick="teste(this.value)" />1
+        <input type="checkbox" name="cbx" value="3" onclick="teste(this.value)" />3
+        <input type="checkbox" name="cbx" value="1" onclick="teste(this.value)" />1
+        <input type="checkbox" name="cbx" value="4" onclick="teste(this.value)" />4
+        <input type="checkbox" name="cbx" value="3" onclick="teste(this.value)" />3
+        <input type="checkbox" name="cbx" value="2" onclick="teste(this.value)" />2
+    </div>
+
+</body>
+<script>
+    function teste(valor) {
+        var checkbx = document.getElementsByName("cbx");
+        for (i of checkbx) {
+            if (i.value == valor) {
+                i.checked = true;
+            } else {
+                i.checked = false;
+            }
+        }
+    }
+</script>
+
+</html>
