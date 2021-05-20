@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>multipleCheckbox</title>
 </head>
 <style>
     div {
@@ -17,25 +17,107 @@
         right: 0;
         margin: auto;
     }
+    
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+    
+    table {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
 </style>
 
 <body>
     <div>
-        <input type="checkbox" name="cbx" value="1" onclick="teste(this.value)" />1
-        <input type="checkbox" name="cbx" value="2" onclick="teste(this.value)" />2
-        <input type="checkbox" name="cbx" value="1" onclick="teste(this.value)" />1
-        <input type="checkbox" name="cbx" value="4" onclick="teste(this.value)" />4
-        <input type="checkbox" name="cbx" value="1" onclick="teste(this.value)" />1
-        <input type="checkbox" name="cbx" value="3" onclick="teste(this.value)" />3
-        <input type="checkbox" name="cbx" value="1" onclick="teste(this.value)" />1
-        <input type="checkbox" name="cbx" value="4" onclick="teste(this.value)" />4
-        <input type="checkbox" name="cbx" value="3" onclick="teste(this.value)" />3
-        <input type="checkbox" name="cbx" value="2" onclick="teste(this.value)" />2
+        <table>
+            <tr>
+                <th>SELECIONE O PEDIDO</th>
+                <th>N° PEDIDO</th>
+            </tr>
+            <tr style="background-color: darkgray;">
+                <td> <input type="checkbox" name="cbx" value="0" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>0</td>
+
+            </tr>
+            <tr style="background-color: darkgray;">
+                <td><input type="checkbox" name="cbx" value="0" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>0</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbx" value="1" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>1</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbx" value="1" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>1</td>
+
+            </tr>
+            <tr style="background-color: darkgray;">
+                <td> <input type="checkbox" name="cbx" value="2" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>2</td>
+
+            </tr>
+            <tr style="background-color: darkgray;">
+                <td> <input type="checkbox" name="cbx" value="2" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>2</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbx" value="3" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>3</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbx" value="3" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>3</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbx" value="3" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>3</td>
+
+            </tr>
+            <tr style="background-color: darkgray;">
+                <td><input type="checkbox" name="cbx" value="4" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>4</td>
+
+            </tr>
+            <tr style="background-color: darkgray;">
+                <td><input type="checkbox" name="cbx" value="4" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>4</td>
+
+            </tr>
+            <tr style="background-color: darkgray;">
+                <td><input type="checkbox" name="cbx" value="4" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>4</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbx" value="5" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>5</td>
+
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cbx" value="5" onclick="checkAllSameValeu(this.value)" /></td>
+                <td>5</td>
+
+            </tr>
+        </table>
+
     </div>
 
 </body>
 <script>
-    function teste(valor) {
+    function checkAllSameValeu(valor) {
         var checkbx = document.getElementsByName("cbx");
         for (i of checkbx) {
             if (i.value == valor) {
