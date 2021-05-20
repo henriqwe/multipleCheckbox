@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>multipleCheckbox</title>
 </head>
@@ -119,13 +118,9 @@
 <script>
     function checkAllSameValeu(valor) {
         var checkbx = document.getElementsByName("cbx");
-        for (i of checkbx) {
-            if (i.value == valor) {
-                i.checked = true;
-            } else {
-                i.checked = false;
-            }
-        }
+        for (i of checkbx)
+            (i.value == valor) ? i.checked = true : i.checked = false;
+
     }
 </script>
 
